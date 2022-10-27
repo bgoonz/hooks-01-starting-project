@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { ueState } from "react";
 
-import Card from '../UI/Card';
-import './IngredientForm.css';
+import Card from "../UI/Card";
+import "./IngredientForm.css";
 
-const IngredientForm = React.memo(props => {
-  const submitHandler = event => {
+const IngredientForm = React.memo((props) => {
+  const inputState = ueState({ title: "", amount: "" });
+  const submitHandler = (event) => {
     event.preventDefault();
     // ...
   };
@@ -15,7 +16,13 @@ const IngredientForm = React.memo(props => {
         <form onSubmit={submitHandler}>
           <div className="form-control">
             <label htmlFor="title">Name</label>
-            <input type="text" id="title" />
+            <input
+              type="text"
+              id="title"
+              value={
+                inputState[0].title /*inputState[0] is the snapshot of the current state which is an object with properties title and value*/
+              }
+            />
           </div>
           <div className="form-control">
             <label htmlFor="amount">Amount</label>
