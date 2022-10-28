@@ -13,7 +13,7 @@
 
 - 1.) You must only use hooks inside of functional components or custom hooks. You can not use hooks inside of class based components.
 - 2.) You always have to use the hooks on the root level of your component.
-
+    - You can not use hooks inside of if statements, loops, or nested functions.
 
 
 
