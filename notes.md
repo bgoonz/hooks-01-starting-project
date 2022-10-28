@@ -6,3 +6,15 @@
 
 
 - In class based components state has to be an object and react does merge it for you, but in functional components state can be anything and you have to merge it yourself.
+
+
+
+### Two important rules for react hooks:
+
+- 1.) You must only use hooks inside of functional components or custom hooks. You can not use hooks inside of class based components.
+- 2.) You always have to use the hooks on the root level of your component.
+
+
+
+
+
